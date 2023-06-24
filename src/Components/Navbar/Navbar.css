@@ -1,0 +1,135 @@
+.navbar-container{
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 1em;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.navbar-left img{
+    padding-right: .3em;
+    height: 1.5em;
+}
+
+.navbar-left .logo-container{
+    padding-right: 1.2em;
+    cursor: pointer;
+    display: flex;
+}
+
+.navbar-left h2{
+    font-family: 'Alex Brush', cursive;
+    color: #fff;
+}
+
+.navbar-left .navigation{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar-left .navigation li{
+    font-size: .9rem;
+    padding-right: 1em;
+}
+
+.navbar-left .navigation li.store{
+    color: var(--font-color2-light);
+}
+
+.navbar-left .navigation li:hover{
+    cursor: pointer;
+    color: var(--font-color2);
+}
+
+
+/* ...................................................... */
+
+.navbar-right button{
+    margin-right: 1em;
+    padding: .4em;
+    
+    border: 1px solid var(--font-color2);
+    border-radius: 5px;
+    
+    background-color: transparent;
+    color: var(--font-color2);
+    font-size: .7rem;
+}
+
+.navbar-right button:hover{
+    cursor: pointer;
+    
+    background-color: var(--font-color2);
+    color: var(--background-color);
+}
+
+
+.navbar-right .right-icon{
+    margin-right: 1em;
+}
+
+.navbar-right .right-icon:hover{
+    cursor: pointer;
+    color: var(--font-color2);
+}
+
+
+
+
+
+
+
+/* .......... MEDIA QUERIES .......... */
+
+@media screen and (max-width: 800px) {
+    .navbar-container{
+        flex-direction: column;
+    }
+    .navbar-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-left{
+        margin-bottom: 1.5em;
+        justify-content: space-around;
+    }
+
+    .navbar-right .right-icon, .navbar-right  button{
+        margin-right: 4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-left{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-left .logo-container{
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-left ul li{
+        font-size: .8rem !important;
+    }
+    .navbar-right .right-icon, .navbar-right  button{
+        margin-right: 3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar-left ul li{
+        font-size: .7rem !important;
+    }
+}
+
+
+

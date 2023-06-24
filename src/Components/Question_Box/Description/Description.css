@@ -1,0 +1,81 @@
+.description-container {
+    /* border: 1px solid green; */
+    overflow: hidden;
+
+    width: 100%;
+    max-height: 50em;
+    height: calc(100% - 3em);
+    overflow-y: auto;
+
+    padding: 1em;
+}
+
+
+/* .......... Scrollbar config .......... */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-color2);
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+    cursor: pointer;
+}
+
+
+.description-container h2{
+    margin-bottom: 1em;
+}
+
+.description-tab {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+
+    display: flex;
+    border-bottom: 1px solid #fff5;
+}
+
+.description-tab div{
+    margin-right: 3em;
+}
+
+.description-tab h4{
+    color: var(--font-color2);
+    font-weight: 600;
+}
+
+.description-tab i{
+    margin-right: .6em;
+    cursor: pointer;
+}
+
+.description-container .content{
+    height: 100%;
+    padding: 2em;
+}
+
+.description-container .content p{
+    margin-bottom: 1.5em;
+}
+
+.description-container .content ol{
+    margin-bottom: 1.5em;
+    padding-left: 3em;
+}
+
+/* .......... MEDIA QUERIES .......... */
+
+@media screen and (max-width: 560px) {
+    .description-tab span{
+        display: none;
+    }
+  }
+  
+
+
+

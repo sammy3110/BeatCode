@@ -1,0 +1,84 @@
+.footer-container{
+    border: 1px solid #fff5;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 1em;
+}
+
+.footer-container button:hover{
+    cursor: pointer;
+    background-color: var(--font-color1);
+    color: var(--background-color2);
+}
+
+.footer-container button{
+    background-color: var(--background-color2);
+    padding: .5em .8em;
+    margin-right: 1em;
+    border-radius: 5px;
+    color: var(--font-color1);
+    
+    border: none;
+}
+
+.footer-container button i{
+    margin-right: .7em;
+}
+
+.footer-container .left{
+    display: flex;
+    align-items: center;
+}
+
+.footer-container .left .pick-one{
+    display: flex;
+    align-items: center;
+}
+.footer-container .left .pick-one p{
+    margin-right: 1em;
+}
+
+.footer-container .submit{
+    background-color: var(--font-color2-light );
+}
+
+
+
+
+/* .......... MEDIA QUERIES .......... */
+
+
+@media screen and (max-width: 800px) {
+    .footer-container .left .pick-one p{
+      display: none;
+    }
+}
+  
+@media screen and (max-width: 670px) {
+    .footer-container .left .pick-one{
+      display: none;
+    }
+}
+  
+@media screen and (max-width: 520px) {
+    .footer-container button{
+        font-size: .7em;
+    }
+    .footer-container .left i{
+      display: none;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .footer-container .left{
+        display: none;
+    }
+}
+  
+
+

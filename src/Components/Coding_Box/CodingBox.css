@@ -1,0 +1,110 @@
+.coding-box-container{
+    border: 1px solid #CAC6BF50;
+    background-color: #CAC6BF10;
+    border-radius: 5px;
+
+    width: 100%;
+    min-height: 60vh;
+}
+
+.coding-box-container .tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 0 1em 0 1em;
+    min-height: 3em;
+}
+
+.coding-box-container .tab select{
+    margin-right: 2.5em;
+
+    background-color: transparent;
+    border: 1px solid var(--font-color1);
+    border-radius: 5px;
+    padding: .2em;
+    color: var(--font-color1);
+    /* color: #fff4; */
+}
+
+.select i{
+    margin-right: 1em;
+    font-size: .7em;
+}
+
+.auto-complete{
+    display: flex;
+    align-items: center;
+}
+
+.auto-complete i{
+    margin-right: 1em;
+    font-size: .6em;
+}
+
+.auto-complete p{
+    font-size: .7em;
+}
+
+.coding-box-container .tab .tab-left{
+    display: flex;
+}
+
+.coding-box-container .tab .tab-right i{
+    font-size: .8em;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+
+.coding-box-container .tab .tab-right i:hover{
+    color: var(--font-color2);
+}
+
+/* .coding-box{
+    height: 100%;
+    width: 100%;
+} */
+
+/* .coding-box textarea{ */
+ textarea{
+    background-color: var(--background-color);
+    color: var(--font-color1);
+    
+    padding: 1em;
+    height: calc(100% - 3.6em);
+    width: 100%;
+    resize: none;
+}
+
+/* .coding-box textarea::-moz-focus-outer{ */
+ /* textarea::-moz-focus-outer{
+    border: 1px solid red;
+} */
+
+/* .......... MEDIA QUERIES .......... */
+
+@media screen and (max-width: 1200px) {
+    .coding-box-container textarea{
+        min-height: 60vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .coding-box-container .tab select{
+        margin-right: 1.5em;
+    }
+    .auto-complete{
+        display: none;
+    }
+    .coding-box-container{
+        min-height: 60vh;
+    }
+}
+  
+
+
+
+
+
+
+

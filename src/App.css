@@ -1,0 +1,40 @@
+:root{
+  --background-color: #181A1B;
+  --background-color2: #202324;
+  --font-color1: #CAC6BF;
+  --font-color2: #FF8725;
+  --font-color2-light: #FF872594;
+  
+}
+
+body{
+  background-color: var(--background-color);
+  color: var(--font-color1);
+}
+
+.center-container{
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  padding: 1em 1em;
+  max-width: 120rem;
+  /* height: 150rem; */
+}
+
+.app-main{  
+  display: flex;
+  justify-content: center;
+}
+
+.app-main .spacer{
+  width: .5em;
+}
+
+/* .......... MEDIA QUERIES .......... */
+
+
+@media screen and (max-width: 1200px) {
+  .app-main{
+    flex-direction: column;
+  }
+}
+
