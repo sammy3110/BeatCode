@@ -69,6 +69,8 @@
  textarea{
     background-color: var(--background-color);
     color: var(--font-color1);
+
+    font-family: 'JetBrains Mono', monospace;
     
     padding: 1em;
     height: calc(100% - 3.6em);

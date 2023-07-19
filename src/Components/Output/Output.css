@@ -1,0 +1,175 @@
+.output-container {
+    border: 1px solid #fff5;
+    border-radius: 10px;
+    margin: .5em 0;
+    padding: 1em;
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ................. Ripple ................. */
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+/* ................. Ripple ................. */
+
+.output-container .spacer{
+
+    border: 1px solid #fff5;
+}
+
+.output-container .in-container{
+    padding: .5em;
+    height: 100%;
+    width: 49%;
+}
+
+.output-container h4{
+    margin-bottom: 1em;
+}
+
+.case-list {
+    margin-bottom: 1em;
+}
+
+.case-list button{
+    padding: .2em .6em;
+    margin-right: 1em;
+    font-size: .7em;
+    
+    border: 1px solid #fff9;
+    border-radius: 5px;
+    
+    background-color: #0005;
+    color: #fff;
+    cursor: pointer;
+}
+
+.case-list button:hover{
+    background-color: transparent;
+    border: 1px solid var(--font-color2);
+}
+
+.case-list button.active{
+    border: 1px solid var(--font-color2);
+}
+
+.case-details .input{
+    margin-bottom: 1em;
+}
+
+.input h6, .output h6{
+    margin-bottom: 1em;
+}
+
+.case-details .input-box, .case-details .output-box{
+    padding: .7em;
+    background-color: var(--font-color1);
+    border-radius: 5px;
+    color: #000 ;
+}
+
+.case-details .input-box p, .case-details .output-box p{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.result-container .code-runner p{
+    font-family: 'JetBrains Mono', monospace;
+    /* font-weight: 600; */
+}
+.result-container .code-runner, .result-container .final-result{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding: .7em;
+    background-color: var(--font-color1);
+    border-radius: 5px;
+    color: #000 ;
+
+    max-height: 15em;
+    overflow: scroll;
+
+}
+
+.result-container .final-result{
+    font-weight: 600;
+}
+
+.code-output .hidden{
+    display: none;
+}
+
+.running-loader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.running-loader span{
+    margin-right: .5em;
+    
+}
+
+.running-loader h3{
+    font-weight: 600;
+}
+
+
+/* .......... MEDIA QUERIES .......... */
+
+@media screen and (max-width: 1200px) {
+    .output-container{
+      flex-direction: column;
+    }
+
+    .output-container .in-container{
+        margin: 1em 0;
+        width: 100%;
+    }
+  }
+  
+
+
+
+

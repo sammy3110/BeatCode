@@ -1,26 +1,28 @@
 import './CodingBox.css'
 import React from 'react'
 
-function CodingBox() {
+function CodingBox({all_languages, setLanguage, code, setCode}) {
+  const changeLanguage = (event) => {
+    setLanguage(event.target.value);
+  }
+
   return (
     <div className='coding-box-container'>
       <div className="tab">
         {/* ...................... */}
 
         <div className="tab-left">
-          <div class="select">
-            <i class="fa-solid fa-code"></i>
-            <select id="standard-select">
-              <option value="Option 1">Python</option>
-              <option value="Option 2">C++</option>
-              <option value="Option 3">C</option>
-              <option value="Option 4">Java</option>
-              <option value="Option 5">JS</option>
+          <div className="select">
+            <i className="fa-solid fa-code"></i>
+            <select onChange={changeLanguage} id="standard-select">
+              {all_languages.map(each => {
+                return <option key={each.id} value={each.id}>{each.name}</option>
+              })}
             </select>
           </div>
 
           <div className="auto-complete">
-            <i class="fa-solid fa-circle-dot"></i>
+            <i className="fa-solid fa-circle-dot"></i>
             <p>Autocomplete</p>
           </div>
         </div>
@@ -28,14 +30,14 @@ function CodingBox() {
         {/* ...................... */}
 
         <div className="tab-right">
-          <i class="fa-solid fa-code"></i>
-          <i class="fa-solid fa-arrow-rotate-left"></i>
-          <i class="fa-solid fa-gear"></i>
+          <i className="fa-solid fa-code"></i>
+          <i className="fa-solid fa-arrow-rotate-left"></i>
+          <i className="fa-solid fa-gear"></i>
         </div>
 
         {/* ...................... */}
       </div>
-      <textarea placeholder='Please select the language and pase your code here. I am not smart enough to detect the language :('></textarea>
+      <textarea onChange={(e) => setCode(e.target.value)} value={code} placeholder='Please select the language and pase your code here.'></textarea>
     </div>
   )
 }

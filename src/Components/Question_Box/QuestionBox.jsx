@@ -3,7 +3,7 @@ import Description from "./Description/Description";
 import React, { useEffect, useRef } from "react";
 import TabContent from "./Tab_Content/TabContent";
 
-function QuestionBox() {
+function QuestionBox({question}) {
 
   const description = useRef(null);
   const solution = useRef(null);
@@ -41,35 +41,23 @@ function QuestionBox() {
     <div className="question-box-container">
       <div className="tab">
         <button ref={description_button} onClick={() => openCity(description_button, description)}>
-        <i class="fa-solid fa-file-lines"></i> <span>Description</span>
+        <i className="fa-solid fa-file-lines"></i> <span>Description</span>
         </button>
         <button ref={solution_button} onClick={() => openCity(solution_button, solution)}>
-        <i class="fa-solid fa-lock"></i> <span>Solution</span> <i class="fa-regular fa-circle-play"></i>
+        <i className="fa-solid fa-lock"></i> <span>Solution</span> <i className="fa-regular fa-circle-play"></i>
         </button>
         <button ref={discuss_button} onClick={() => openCity(discuss_button, discuss)}>
-        <i class="fa-regular fa-message"></i> <span>Discuss (999+)</span>
+        <i className="fa-regular fa-message"></i> <span>Discuss (999+)</span>
         </button>
         <button ref={submissions_button} onClick={() => openCity(submissions_button, submissions)}>
-        <i class="fa-regular fa-clock"></i> <span>Submissions</span>
+        <i className="fa-regular fa-clock"></i> <span>Submissions</span>
         </button>
       </div>
 
-        <Description className="tabcontent" description={description}/>
-        <TabContent className="tabcontent" reference={solution}/>
-        <TabContent className="tabcontent" reference={discuss}/>
-        <TabContent className="tabcontent" reference={submissions}/>
-
-      {/* <div ref={solution} className="tabcontent">
-        <h1>Solution</h1>
-      </div> */}
-
-      {/* <div ref={discuss} className="tabcontent">
-        <h1>Discuss</h1>
-      </div>
-
-      <div ref={submissions} className="tabcontent">
-        <h1>Submissions</h1>
-      </div> */}
+      <Description question={question} className="tabcontent" description={description}/>
+      <TabContent className="tabcontent" reference={solution}/>
+      <TabContent className="tabcontent" reference={discuss}/>
+      <TabContent className="tabcontent" reference={submissions}/>
     </div>
   );
 }
