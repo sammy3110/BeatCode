@@ -2,8 +2,8 @@ import './Output.css';
 import React, { useEffect, useRef, useState } from 'react';
 
 function Output({question, compilerOutput, loader, finalOutput}) {
-    const [caseNumber, setCaseNumber] = useState(0);
-    const [testCase, setTestCase] = useState(question.test_cases[caseNumber]);
+    // const [caseNumber, setCaseNumber] = useState(0);
+    const [testCase, setTestCase] = useState(question.test_cases[0]);
     const case_list = useRef(null)
     
     useEffect(() => {
